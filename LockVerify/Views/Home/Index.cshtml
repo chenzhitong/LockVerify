@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>NEO lock contract verify</h2>
+<form action="~/Home/Verify" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Please input script of NEO lock contract</label>
+        <input type="text" name="script" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Verify</button>
+</form>
+<div class="m-2">
+    @if (!String.IsNullOrEmpty(ViewBag.Error))
+    {
+        <p class="text-danger">Not correct lock contract!</p>
+        <p class="text-danger">@ViewBag.Error</p>
+    }
+    else if (!string.IsNullOrEmpty(ViewBag.Address))
+    {
+        <p class="text-success">Correct lock contract!</p>
+        <p class="text-success">Public key: @ViewBag.Pubkey</p>
+        <p class="text-success">Lock time: @ViewBag.Time</p>
+        <p class="text-success">Script hash: @ViewBag.ScriptHash</p>
+        <p class="text-success">Address: @ViewBag.Address</p>
+    }
+</div>
