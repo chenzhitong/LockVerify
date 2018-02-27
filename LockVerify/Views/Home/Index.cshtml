@@ -2,10 +2,10 @@
     ViewData["Title"] = "Home Page";
 }
 <h2>NEO lock contract verify</h2>
-<form action="~/Home/Verify" method="post">
+<form asp-controller="Home" asp-action="Index" method="post">
     <div class="form-group">
         <label for="exampleInputEmail1">Please input script of NEO lock contract</label>
-        <input type="text" name="script" class="form-control">
+        <input type="text" id="script" name="script" class="form-control">
     </div>
     <button type="submit" class="btn btn-primary">Verify</button>
 </form>
@@ -19,7 +19,7 @@
     {
         <p class="text-success">Correct lock contract!</p>
         <p class="text-success">Public key: @ViewBag.Pubkey</p>
-        <p class="text-success">Lock time: @ViewBag.Time</p>
+        <p class="text-success">Unlock time: @ViewBag.Time</p>
         <p class="text-success">Script hash: @ViewBag.ScriptHash</p>
         <p class="text-success">Address: @ViewBag.Address</p>
     }
