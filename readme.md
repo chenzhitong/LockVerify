@@ -14,15 +14,15 @@ You need to create an lock account via [neo-gui](https://neo.org/download), then
 
 2. Right-click in a blank place, `Create Contract Add.` `Lock...`
 
-   ![](Images/2018-02-27_14-08-43.png)
+   ![](Images/a.png)
 
 3. Select your Account and Unlock Date, then click `Create`.
 
-   ![](Images/2018-02-27_14-08-56.png)
+   ![](Images/b.png)
 
 4. Now you can see a Contract Address in your wallet. Righ click this Address, `View Contract`，and copy Redeem Script and Address to sender.
 
-   ![](Images/2018-02-27_14-10-08.png)
+   ![](Images/c.png)
 
 
 
@@ -32,7 +32,7 @@ You need to create an lock account via [neo-gui](https://neo.org/download), then
 
 2. Click `Verify`
 
-   ![](Images/2018-02-27_14-29-29.png)
+   ![](Images/d.png)
 
 3. If the Redeem Script is **not** correct lock contract, it will be alert error.
 
