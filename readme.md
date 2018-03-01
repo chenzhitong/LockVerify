@@ -40,4 +40,4 @@ You need to create an lock account via [neo-gui](https://neo.org/download), then
 
 5. Compare this address to the address which sender gave you.
 
-
+Once everything is in place, the sender can send assets to the lock address. No assets (Neo,gas, and other assets) in this address can be transferred until the unlock date. After the date, the recipient can transfer the assets freely.
