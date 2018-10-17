@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using LockVerify.Models;
 using Neo;
 using Neo.Wallets;
-using Neo.Core;
 using System.Numerics;
+using Neo.SmartContract;
 
 namespace LockVerify.Controllers
 {
@@ -46,7 +42,7 @@ namespace LockVerify.Controllers
             ViewBag.Pubkey = script.Substring(2, 66);
             ViewBag.Time = ((uint)timestamp).ToDateTime();
             ViewBag.ScriptHash = script.HexToBytes().ToScriptHash();
-            ViewBag.Address = Wallet.ToAddress(ViewBag.ScriptHash);
+            ViewBag.Address = ViewBag.ScriptHash.ToAddress();
             return View();
         }
     }
